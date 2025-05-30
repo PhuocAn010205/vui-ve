@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
     <div class="container-fluid">
         <div class="jumbotron img_banner_hpbd">
             <div class="text-center text-danger bg-danger">
@@ -38,7 +37,8 @@
                 <!-- <button type="button" class="">
                    
                     </button> -->
-                <img data-toggle="modal" data-target="#myModal" class="media-object img-responsive img-thumbnail bg-snow-tranparent-hidden"
+                <img data-toggle="modal" data-target="#myModal"
+                    class="media-object img-responsive img-thumbnail bg-snow-tranparent-hidden"
                     src="img/Winter happy birthday.jpg" alt="80x80px" style="height: 360px">
             </div>
         </div>
@@ -57,8 +57,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="containeri">
-                        <img class="img img-responsive" src="img/Winter happy birthday.jpg" alt="80x80px" style="height: 560px">
-                        <audio controls autoplay>
+                        <img class="img img-responsive" src="img/Winter happy birthday.jpg" alt="80x80px"
+                            style="height: 560px">
+                        <audio controls hidden>
                             <a href="#">horse</a>
                         </audio>
                     </div>
@@ -66,7 +67,9 @@
                         <div class="containeri">
                             <img class="img img-responsive" src="./img/hpbd quan.jpg">
                             <p class="top-right">Chúc chị Phụng</p>
-                            <p class="bottom-right" >Có 1 ngày sinh nhật thật vui vẻ,tràn đầy yêu thương và hạnh phúc.Mong rằng tất cả những dự định của chị sẽ trở thành hiện thực và là 1 năm đầy thành công rực rỡ </p>
+                            <p class="bottom-right">Có 1 ngày sinh nhật thật vui vẻ,tràn đầy yêu thương và hạnh
+                                phúc.Mong rằng tất cả những dự định của chị sẽ trở thành hiện thực và là 1 năm đầy thành
+                                công rực rỡ </p>
                         </div>
                     </h1>
                     <div class="containeri">
@@ -78,9 +81,18 @@
                 </div>
             </div>
         </div>
-    </div>
+                <audio src="./img/SinhNhat-HIEUTHUHAI-6350582.mp3" autoplay hidden></audio>
 
-    
+    </div>
+    <script>
+    // Khi trang tải xong, phát lại nhạc
+    window.addEventListener('load', function() {
+        var audio = document.getElementById('birthday-audio');
+        audio.currentTime = 0;
+        audio.play();
+    });
+</script>
+
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <!-- required, default behaviour -->
