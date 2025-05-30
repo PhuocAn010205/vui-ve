@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>HPBD CHị Sếp</title>
+    <title>HPBD Chị Sếp Xinh Đẹp</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -40,7 +40,6 @@
                 <img data-toggle="modal" data-target="#myModal"
                     class="media-object img-responsive img-thumbnail bg-snow-tranparent-hidden"
                     src="img/Winter happy birthday.jpg" alt="80x80px" style="height: 360px">
-                <audio id="birthday-audio" src="./img/SinhNhat-HIEUTHUHAI-6350582.mp3" autoplay hidden></audio>
 
             </div>
         </div>
@@ -86,9 +85,12 @@
         </div>
 
     </div>
-    <script>
-    // Khi trang tải xong, phát lại nhạc
-    window.addEventListener('load', function() {
+<!-- Thêm audio ẩn ở cuối body -->
+<audio id="birthday-audio" src="./img/SinhNhat-HIEUTHUHAI-6350582.mp3" hidden></audio>
+
+<script>
+    // Khi người dùng bấm vào #bond thì phát nhạc
+    document.getElementById('bond').addEventListener('click', function() {
         var audio = document.getElementById('birthday-audio');
         audio.currentTime = 0;
         audio.play();
